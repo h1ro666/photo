@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Женский Форум 2026 — Билеты</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink-soft: #f8e8ee;
+            --pink-medium: #f2c4d4;
+            --pink-accent: #e8a0b8;
+            --lavender: #e8ddf5;
+            --lavender-deep: #c9b8e8;
+            --cream: #fdf8f4;
+            --peach: #fde8d8;
+            --sage: #e8f0e8;
+            --text-dark: #4a3f45;
+            --text-medium: #6b5f66;
+            --text-light: #9a8d94;
+            --gold: #d4a574;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Decorative background */
+        .bg-decoration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .bg-circle:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--pink-soft);
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .bg-circle:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            background: var(--lavender);
+            bottom: -50px;
+            left: -80px;
+            animation-delay: -5s;
+        }
+
+        .bg-circle:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            background: var(--peach);
+            top: 50%;
+            left: 60%;
+            animation-delay: -10s;
+        }
+
+        .bg-circle:nth-child(4) {
+            width: 150px;
+            height: 150px;
+            background: var(--sage);
+            top: 30%;
+            left: 10%;
+            animation-delay: -15s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(20px, -30px) scale(1.05); }
+            50% { transform: translate(-10px, 20px) scale(0.95); }
+            75% { transform: translate(15px, 10px) scale(1.02); }
+        }
+
+        /* Petal animation */
+        .petals {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .petal {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--pink-medium);
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.4;
+            animation: fall linear infinite;
+        }
+
+        .petal:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 0s; width: 10px; height: 10px; }
+        .petal:nth-child(2) { left: 25%; animation-duration: 15s; animation-delay: 2s; width: 14px; height: 14px; background: var(--lavender-deep); }
+        .petal:nth-child(3) { left: 40%; animation-duration: 11s; animation-delay: 4s; }
+        .petal:nth-child(4) { left: 55%; animation-duration: 14s; animation-delay: 1s; width: 8px; height: 8px; background: var(--peach); }
+        .petal:nth-child(5) { left: 70%; animation-duration: 13s; animation-delay: 3s; width: 11px; height: 11px; }
+        .petal:nth-child(6) { left: 85%; animation-duration: 16s; animation-delay: 5s; background: var(--lavender); }
+        .petal:nth-child(7) { left: 50%; animation-duration: 10s; animation-delay: 6s; width: 9px; height: 9px; }
+        .petal:nth-child(8) { left: 92%; animation-duration: 14s; animation-delay: 2.5s; background: var(--pink-soft); }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Main container */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-ornament {
+            font-size: 28px;
+            color: var(--pink-accent);
+            margin-bottom: 15px;
+            letter-spacing: 8px;
+        }
+
+        .header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2em;
+            font-weight: 300;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .header h1 span {
+            display: block;
+            font-size: 0.5em;
+            font-weight: 400;
+            color: var(--pink-accent);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+
+        .header-subtitle {
+            font-size: 0.95em;
+            font-weight: 300;
+            color: var(--text-medium);
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .header-date {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 25px;
+            background: linear-gradient(135deg, var(--pink-soft), var(--lavender));
+            border-radius: 30px;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: var(--text-medium);
+            letter-spacing: 1px;
+        }
+
+        /* Card */
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 45px 40px;
+            width: 100%;
+            box-shadow: 
+                0 20px 60px rgba(232, 160, 184, 0.15),
+                0 8px 25px rgba(201, 184, 232, 0.1);
+            border: 1px solid rgba(248, 232, 238, 0.8);
+            transition: all 0.5s ease;
+        }
+
+        .card:hover {
+            box-shadow: 
+                0 25px 70px rgba(232, 160, 184, 0.2),
+                0 10px 30px rgba(201, 184, 232, 0.15);
+        }
+
+        /* Steps indicator */
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .step-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--pink-soft);
+            transition: all 0.4s ease;
+        }
+
+        .step-dot.active {
+            background: var(--pink-accent);
+            transform: scale(1.3);
+            box-shadow: 0 0 12px rgba(232, 160, 184, 0.5);
+        }
+
+        .step-dot.completed {
+            background: var(--lavender-deep);
+        }
+
+        /* Section titles */
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8em;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--pink-accent), var(--lavender-deep));
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Agreement section */
+        .agreement-box {
+            background: linear-gradient(135deg, var(--pink-soft), var(--lavender));
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            max-height: 220px;
+            overflow-y: auto;
+            font-size: 0.85em;
+            line-height: 1.8;
+            color: var(--text-medium);
+            border: 1px solid rgba(242, 196, 212, 0.5);
+        }
+
+        .agreement-box::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .agreement-box::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .agreement-box::-webkit-scrollbar-thumb {
+            background: var(--pink-medium);
+            border-radius: 3px;
+        }
+
+        .agreement-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .agreement-box p {
+            margin-bottom: 10px;
+        }
+
+        /* Checkbox */
+        .checkbox-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 12px;
+            transition: background 0.3s ease;
+        }
+
+        .checkbox-wrapper:hover {
+            background: rgba(248, 232, 238, 0.5);
+        }
+
+        .custom-checkbox {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            border: 2px solid var(--pink-medium);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-top: 2px;
+        }
+
+        .custom-checkbox svg {
+            width: 14px;
+            height: 14px;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-wrapper.checked .custom-checkbox {
+            background: linear-gradient(135deg, var(--pink-accent), var(--lavender-deep));
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(232, 160, 184, 0.4);
+        }
+
+        .checkbox-wrapper.checked .custom-checkbox svg {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .checkbox-label {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: var(--text-medium);
+        }
+
+        .checkbox-label strong {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Button */
+        .btn-primary {
+            width: 100%;
+            padding: 18px 35px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--pink-accent), var(--lavender-deep));
+            color: white;
+            box-shadow: 0 8px 25px rgba(232, 160, 184, 0.35);
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(232, 160, 184, 0.5);
+        }
+
+        .btn-primary:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover:not(:disabled)::before {
+            left: 100%;
+        }
+
+        /* Payment section (hidden initially) */
+        .payment-section {
+            display: none;
+            text-align: center;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .payment-section.visible {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .payment-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--pink-soft), var(--lavender));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+
+        .payment-info {
+            background: var(--sage);
+            border-radius: 14px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .payment-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 16px 45px;
+            background: linear-gradient(135deg, var(--gold), #e8b88a);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(212, 165, 116, 0.35);
+        }
+
+        .payment-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(212, 165, 116, 0.5);
+        }
+
+        /* Success message */
+        .success-msg {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .success-msg.visible {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        /* Ticket info */
+        .ticket-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(248,232,238,0.5), rgba(232,221,245,0.5));
+            border-radius: 14px;
+            padding: 18px 22px;
+            margin-bottom: 25px;
+            border: 1px dashed var(--pink-medium);
+        }
+
+        .ticket-info-left {
+            font-size: 0.85em;
+            color: var(--text-light);
+        }
+
+        .ticket-info-left strong {
+            display: block;
+            font-size: 1.2em;
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-top: 3px;
+        }
+
+        .ticket-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2em;
+            font-weight: 600;
+            color: var(--pink-accent);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 35px;
+            font-size: 0.8em;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .footer a {
+            color: var(--pink-accent);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .card {
+                padding: 30px 25px;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .ticket-info {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+
+        /* Transition for sections */
+        .agreement-section {
+            transition: all 0.5s ease;
+        }
+
+        .agreement-section.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background decoration -->
+    <div class="bg-decoration">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <!-- Falling petals -->
+    <div class="petals">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-ornament">✿ ❀ ✿</div>
+            <h1>
+                Женский Форум
+                <span>Красота · Сила · Вдохновение</span>
+            </h1>
+            <p class="header-subtitle">
+                Пространство, где каждая женщина раскрывает свою уникальность,<br>
+                находит поддержку и вдохновение для новой жизни
+            </p>
+            <div class="header-date">📅 11 августа 2026 · Москва</div>
+        </header>
+
+        <!-- Main Card -->
+        <div class="card">
+            <!-- Steps -->
+            <div class="steps">
+                <div class="step-dot active" id="step1"></div>
+                <div class="step-dot" id="step2"></div>
+            </div>
+
+            <!-- Step 1: Agreement -->
+            <div class="agreement-section" id="agreementSection">
+                <h2 class="section-title">Соглашение участницы</h2>
+
+                <div class="ticket-info">
+                    <div class="ticket-info-left">
+                        Билет на форум
+                        <strong>«Женская Сила 2026»</strong>
+                    </div>
+                    <div class="ticket-price">4 900 ₽</div>
+                </div>
+
+                <div class="agreement-box">
+                    <h4>📜 Условия участия</h4>
+                    <p>1. Настоящее соглашение регулирует условия участия в Женском Форуме «Женская Сила 2026», проводимом 11 августа 2026 года.</p>
+                    <p>2. Приобретая билет, участница подтверждает своё согласие с правилами проведения мероприятия, включая кодекс поведения и политику конфиденциальности.</p>
+                    <p>3. Билет является именным и не подлежит передаче третьим лицам без предварительного согласования с организаторами.</p>
+                    <p>4. Возврат средств возможен не позднее чем за 7 дней до начала мероприятия. После указанного срока возврат не осуществляется.</p>
+                    <p>5. Организатор оставляет за собой право вносить изменения в программу форума, уведомляя участниц не менее чем за 3 дня.</p>
+                    <p>6. На территории форума ведётся фото- и видеосъёмка. Приобретая билет, участница даёт согласие на использование материалов в promotional-целях.</p>
+                    <p>7. Участница обязуется уважительно относиться к другим участницам, спикерам и организаторам. Любые проявления дискриминации недопустимы.</p>
+                    <p>8. Персональные данные участниц обрабатываются в соответствии с ФЗ-152 «О персональных данных» и не передаются третьим лицам.</p>
+                </div>
+
+                <div class="checkbox-wrapper" id="checkboxWrapper" onclick="toggleCheckbox()">
+                    <div class="custom-checkbox">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <span class="checkbox-label">
+                        <strong>Я прочитала и принимаю условия соглашения</strong><br>
+                        Я подтверждаю, что ознакомилась с правилами участия, политикой возврата и даю согласие на обработку персональных данных.
+                    </span>
+                </div>
+
+                <button class="btn-primary" id="acceptBtn" disabled onclick="proceedToPayment()">
+                    Принять и перейти к оплате ✨
+                </button>
+            </div>
+
+            <!-- Step 2: Payment -->
+            <div class="payment-section" id="paymentSection">
+                <div class="payment-icon">💳</div>
+                <h2 class="section-title">Оплата билета</h2>
+
+                <p style="color: var(--text-medium); font-size: 0.9em; line-height: 1.7; margin-bottom: 20px;">
+                    Соглашение принято! Теперь перейдите по ссылке ниже для безопасной оплаты билета на Женский Форум.
+                </p>
+
+                <div class="payment-info">
+                    🌸 <strong>Билет:</strong> Женский Форум «Женская Сила 2026»<br>
+                    📅 <strong>Дата:</strong> 11 августа 2026<br>
+                    📍 <strong>Место:</strong> Москва, Конгресс-холл «Гармония»<br>
+                    💰 <strong>Сумма:</strong> 4 900 ₽
+                </div>
+
+                <!-- Замените href на вашу реальную платёжную ссылку -->
+                <a href="https://your-payment-link.com" target="_blank" class="payment-link" onclick="showSuccess()">
+                    Перейти к оплате →
+                </a>
+
+                <div class="success-msg" id="successMsg">
+                    <div class="success-icon">🎉</div>
+                    <p style="color: var(--text-medium); font-size: 0.9em; line-height: 1.7;">
+                        Вы перешли к оплате! После завершения платежа<br>
+                        подтверждение придёт на вашу электронную почту. 💌
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>С любовью и заботой о каждой женщине 🌷</p>
+            <p>Вопросы? <a href="mailto:hello@womensforum.ru">hello@womensforum.ru</a></p>
+            <p style="margin-top: 8px; opacity: 0.7;">© 2026 Женский Форум «Женская Сила»</p>
+        </footer>
+    </div>
+
+    <script>
+        let isChecked = false;
+
+        function toggleCheckbox() {
+            isChecked = !isChecked;
+            const wrapper = document.getElementById('checkboxWrapper');
+            const btn = document.getElementById('acceptBtn');
+
+            if (isChecked) {
+                wrapper.classList.add('checked');
+                btn.disabled = false;
+            } else {
+                wrapper.classList.remove('checked');
+                btn.disabled = true;
+            }
+        }
+
+        function proceedToPayment() {
+            if (!isChecked) return;
+
+            // Hide agreement section
+            document.getElementById('agreementSection').classList.add('hidden');
+
+            // Show payment section
+            document.getElementById('paymentSection').classList.add('visible');
+
+            // Update steps
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step1').classList.add('completed');
+            document.getElementById('step2').classList.add('active');
+
+            // Scroll to top of card
+            document.querySelector('.card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function showSuccess() {
+            setTimeout(() => {
+                document.getElementById('successMsg').classList.add('visible');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
